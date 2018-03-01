@@ -1,0 +1,102 @@
+{
+  "extends": "airbnb", // 支持ES6以及React
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y"
+  ],
+  "rules": {
+    // 插件中的规则 
+    "react/jsx-no-bind": ["warn", { "allowArrowFunctions": true, "allowBind": false }],
+    "jsx-a11y/anchor-has-content": "off", // 是否在本页上有对应的锚点
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/img-has-alt": "off",
+    "react/prefer-stateless-function": "error",
+    "react/require-extension": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-first-prop-new-line": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/no-did-mount-set-state": "off",
+    "react/prop-types": "warn",
+    "react/require-default-props": "off",
+    "import/no-extraneous-dependencies": "off", //["error", { "devDependencies": true }]
+    "import/no-unresolved": "off",
+    "import/newline-after-import": "error",
+    "import/imports-first": "off",
+    "react/jsx-boolean-value": "off",
+    "react/no-unused-prop-types": "off",
+    "react/forbid-prop-types": "off",
+    "class-methods-use-this": "off",
+    "import/extensions": ["error", {"js": "never", "jsx": "never", "json": "always"}], // 显示扩展名
+    //    "react/prefer-es6-class": "off", // ES6创建类的方式
+
+    "no-restricted-syntax": "off",
+    "no-unused-expressions": "off",
+    "no-continue": "off",
+    "no-underscore-dangle": ["error", { "allow": ["_store", "_models", "_router", "_history"] }], // 禁止标识符中有悬空下划线
+    "no-debugger": "warn", // dev 开发环境
+    "no-nested-ternary": "off", // 嵌套的三元表达式
+    "prefer-const": "warn",
+    "no-unneeded-ternary": ["error", { "defaultAssignment": false }], //禁止使用没有必要的三元操作符，因为用有些三元操作符可以使用其他语句替换该规则不允许条件表达式作为一个缺省赋值模式。
+    "arrow-parens": ["error", "always"],
+    "no-prototype-builtins": "off",
+    "import/export": "off",
+    "no-param-reassign": ["error", { "props": false }], //禁止对函数的参数重新进行无意义的赋值
+    "no-useless-constructor": "error", //ES2015提供了默认的空构造函数，禁止使用不必要的空构造函数
+    "arrow-body-style": ["error", "as-needed"], // 箭头函数是否需要大括号
+    "object-shorthand": "off", // FIXME
+    "vars-on-top": "off",
+    "new-cap": ["error", { "capIsNew": false }], // 允许调用首字母大写的函数时没有 new 操作符;使用构造函数(new)时首字母需大写，首字母大写的函数需用new操作符
+    "quote-props": [2, "consistent"], //对象的属性名是否强制加双引号
+    "dot-notation": "off", // 要求使用点号  (foo.bar) 或者方括号 (foo["bar"])来访问属性
+    "prefer-template": "error", // 建议使用模板而非字符串连接
+    "eqeqeq": ["error", "smart"], // 使用 === 替代 ==
+    "keyword-spacing": ["error", {"before": true, "after": true, "overrides": {"return": { "after": true }, "throw": { "after": true }, "case": { "after": true }}}], // 规定了keyword前后是否需要留一个空格
+    "padded-blocks": ["error", "never"], // 强制块内填充
+    "max-len": "off", // 强制行的最大长度
+    "one-var": ["off", "always"], //规定了在每个函数中声明变量是否只使用一次var，该规则同样适用于let和const
+    "object-curly-spacing": "off", //规定对象字面量中大括号内是否允许加空格，也适用于ES6中的结构赋值和模块import和export
+    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }], //该规则规定了在对象字面量语法中key和value之间的空白，冒号前不要留空格，冒号后面需留一个空格
+    "no-unused-vars": "off", // !!不允许定义的变量在后面的代码中没有被使用到
+    "no-case-declarations": "error", // 禁止在 case 或 default 子句中出现词法声明
+    "array-bracket-spacing": ["error", "never"], // 用数组字面量定义数组时数组元素前后是否加空格
+    "array-callback-return": "off", // 强制数组方法的回调函数中有 return 语句
+    "global-require": "off", // 强制在模块顶部调用
+//    "spaced-comment": "off",  // [2, "always", { "markers": ["global", "globals", "eslint", "eslint-disable", "*package", "!", ","] }] 规定是否需要在代码注释起始符// or /*后面至少紧跟一个空格
+    "jsx-quotes": ["warn", "prefer-double"], // 使用双引号 规定了在JSX中的属性值是使用单引号还是双引号,默认使用双引号
+    // enable additional rules
+    "indent": ["warn", 2, { "SwitchCase": 1 , "VariableDeclarator": { "var": 2, "let": 2, "const": 3 }}], // 强制使用一致的缩进
+    "linebreak-style": "off", // 换行符类型 ["error", "unix"]
+    "quotes": ["error", "single", "avoid-escape"],
+    "semi": ["error", "never"], // 强制或禁止分号
+    "eol-last": "error", //该规则规定文件最后强制换行，仅需留一空行
+    // override default options for rules from base configurations
+    "comma-dangle": ["error", "never"], // 拖尾逗号
+    "no-cond-assign": ["error", "always"],
+    // disable rules from base configurations
+    "no-console": "off",
+    "no-empty": ["warn", { "allowEmptyCatch": true }], // 禁止空块语句 允许出现空的 catch 子句 (也就是说，不包含注释)
+    "default-case": "warn", // 要求 switch 语句中有 default 分支
+    "no-alert": "error", // 禁用 alert、confirm 和 prompt
+    "no-multi-spaces": "warn", // 禁止使用多个空格
+    "no-multi-str": "error", // 禁止多行字符串
+    "camelcase": ["error", {"properties": "never"}], // 要求使用骆驼拼写法
+    "func-call-spacing": ["error", "never"],
+    "no-multiple-empty-lines": ["warn", { "max": 2 }], // 不允许多个空行
+    "object-curly-newline": "off",
+    "spaced-comment": ["error", "always"],
+    "require-yield": "error", // 要求 generator 函数内有 yield
+    "generator-star-spacing": ["error", {"before": true, "after": false}], // 强制 generator 函数中 * 号周围有空格
+    "yield-star-spacing": ["error", "after"], // 强制在 yield* 表达式中 * 周围使用空格
+    "newline-before-return": "off", // 要求 return 语句之前有一空行
+    "no-return-assign": "off" //  关闭 禁止在返回语句中赋值
+  }
+}

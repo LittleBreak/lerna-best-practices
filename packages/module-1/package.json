@@ -1,0 +1,23 @@
+{
+  "name": "module-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "module-2": "^1.0.0",
+    "eslint": "^4.18.1",
+    "husky": "^0.15.0-rc.8",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.10.2"
+  },
+  "lint-staged": {
+    "src/**/*.js": ["prettier --write", "eslint", "git add"]
+  }
+}
+

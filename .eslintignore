@@ -1,0 +1,10 @@
+**/bak/**
+**/bin/**
+**/config/**
+**/dist/**
+**/doc/**
+**/node_modules/**
+**/public/**
+**/report/**
+**/server/**
+**/webpack.config*.js

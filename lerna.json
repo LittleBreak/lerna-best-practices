@@ -1,7 +1,23 @@
 {
   "lerna": "2.7.0",
+  "version": "independent",
+  "changelog": {
+    "labels": {
+      "tag: new feature": ":rocket: New Feature",
+      "tag: breaking change": ":boom: Breaking Change",
+      "tag: bug fix": ":bug: Bug Fix",
+      "tag: enhancement": ":nail_care: Enhancement",
+      "tag: documentation": ":memo: Documentation",
+      "tag: internal": ":house: Internal"
+    },
+    "cacheDir": ".changelog"
+  },
   "packages": [
     "packages/*"
   ],
-  "version": "0.0.0"
+  "commands": {
+    "publish": {
+      "message": "chore(release): publish %v"
+    }
+  }
 }
