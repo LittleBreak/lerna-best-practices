@@ -13,6 +13,6 @@
     "prettier": "^1.10.2"
   },
   "lint-staged": {
-    "src/**/*.js": ["prettier --write", "eslint", "git add"]
+    "packages/**/*.js": ["prettier --write", "eslint", "git add"]
   }
 }
