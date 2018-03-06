@@ -8,8 +8,6 @@ a simple lerna project,have some defalut config to reduce initial lerna congig w
 you should install lerna global with npm or yarn.
 
 ```shell
-// use npm
-npm install lerna -g 
 // use yarn
 yarn global add lerna
 ```
@@ -17,5 +15,16 @@ yarn global add lerna
 
 ## Developing
 
+### install packages dependencies
+```shell
+lerna bootstrap
+```
+### publish
+in project root directory, it has publish script in package.json file. you can hust use it.
+```shell
+yarn run publish-l
+```
+
+```
 yan can develop your project use lerna command.
 [lerna](https://github.com/lerna/lerna)
