@@ -32,7 +32,7 @@
     "rimraf": "^2.6.2"    
   },
   "lint-staged": {
-    "packages/**/*.js": [
+    "packages/**/*.{js,jsx}": [
       "prettier --write",
       "eslint",
       "git add"
