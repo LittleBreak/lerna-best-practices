@@ -3,7 +3,8 @@
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write \"src/**/*.jsx\" \"src/**/*.js\"",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "publish-l": "lerna publish --conventional-commits --independent"
   },
 	"devDependencies": {
 		"lerna": "^2.7.0",
