@@ -1,7 +1,7 @@
 # lerna-best-practices
 > lerna best pratices
 
-a simple lerna project,have some defalut config to reduce initial lerna congig working.
+a simple lerna project,have some defalut config to reduce initial lerna config working.
 
 ## Installing / Getting started
 
